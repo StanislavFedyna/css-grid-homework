@@ -34,7 +34,7 @@ div {
   ;
 }
 
-/* header section */
+/* №1 Header section */
 .headers_wrapper {
   display: grid;
   grid-template-columns: 70px auto;
@@ -46,21 +46,25 @@ div {
   background: #7D44D6;
 }
 
-/* images section */
+/* №2 Images section */
 .images__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-area: img;
 }
-
+.images__wrapper img{
+  padding-top: 5px;
+  width: 50px;
+  height:40px;
+}
 .images__wrapper>div {
   background: #956BD6;
 }
 
-/* banner section */
+/* №3 Banner section */
 .banners__wrapper {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px auto;   /* 3.1 дати min */
   grid-area: bnr;
 }
 
@@ -69,7 +73,7 @@ div {
   background: #4C2982;
 }
 
-/* Main section */
+/* №4 Main section */
 .mainSection__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -80,13 +84,13 @@ div {
   background: #74217D;
 }
 
-/* Content section */
+/* №5 Content section */
 .content__wrapper {
   background: #C861D3;
   grid-area: content;
 }
 
-/* Navigation section */
+/* №6 Navigation section */
 .navigation__wrapper {
   background: #2F3584;
   grid-area: nav;
@@ -102,7 +106,7 @@ div {
   cursor: pointer;
 }
 
-/* Footer section */
+/* №7 Footer section */
 .footer__wrapper {
   background: #7279D8;
   grid-area: foot;
