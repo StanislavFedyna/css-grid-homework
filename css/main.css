@@ -1,173 +1,194 @@
-* ::before ::after {
-  box-sizing: border-box;
+* ::before ::after
+{
+    box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  font-family: serif;
-  font-weight: bold;
+body
+{
+    font-family: serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
-div {
-  border: 0.5px solid white;
+div
+{
+    border: .5px solid white;
 }
 
-.grid__container {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px auto auto 240px 100px 40px;
-  grid-template-areas:
-    "header header header header"
-    "img img img img"
-    "bnr bnr bnr bnr"
-    "main main nav nav"
-    "content content . ."
-    "foot foot foot foot"
-  ;
+.grid__container
+{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px auto auto 240px auto 100px 30px;
+    grid-template-areas: 
+    'header header header header'
+    'img img img img'
+    'bnr bnr bnr bnr'
+    'main main nav nav'
+    'ch-2 ch-3 . .'
+    'content content . .'
+    'foot foot foot foot'
+    ;
 }
 
 /* №1 Header section */
-.headers__wrapper {
-  display: grid;
-  grid-template-columns: 70px auto; /* 1.1 fixed */
-  grid-area: header;
+.headers__wrapper
+{
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-area: header;
 }
 
-.headers__wrapper>div {
-  background: #7D44D6;
+.headers__wrapper > div
+{
+    background: #7d44d6;
 }
 
 /* №2 Images section */
-.images__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: img;
+.images__wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-area: img;
 }
 
-.images__wrapper img {
-  width: 50px;
-  height: 40px;
+.images__wrapper img
+{
+    width: 50px;
+    height: 40px;
 }
 
-.images__wrapper>div {
-  background: #956BD6;
+.images__wrapper > div
+{
+    background: #956bd6;
 }
 
 /* №3 Banner section */
-.banners__wrapper {
-  display: grid;
-  grid-template-columns: 1.4fr 3fr;
-  grid-template-rows: 40px;
-  grid-area: bnr;
+.banners__wrapper
+{
+    display: grid;
+    grid-template-columns: 1.4fr 3fr;
+    grid-template-rows: 40px;
+    grid-area: bnr;
 }
 
-.banners__wrapper>div {
-  background: #4C2982;
+.banners__wrapper > div
+{
+    background: #4c2982;
 }
 
 /* №4 Main section */
-.mainSection__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-area: main;
+.mainSection__wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: main;
 }
 
-.mainSection__wrapper>div {
-  background: #74217D;
+.mainSection__wrapper > div
+{
+    background: #74217d;
 }
 
 
 /* №5 Content section */
-.content__wrapper {
-  background: #C861D3;
-  grid-area: content;
+.content__wrapper
+{
+    background: #c861d3;
+    grid-area: content;
 }
 
 /* №6 Navigation section */
-.navigation__wrapper {
-  background: #2F3584;
-  align-self: start;
-  grid-area: nav;
+.navigation__wrapper
+{
+    background: #2f3584;
+    align-self: start;
+    grid-area: nav;
 }
 
-.navigation__wrapper li {
-  list-style: none;
+.navigation__wrapper li
+{
+    list-style: none;
 }
 
-.navigation__wrapper a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+.navigation__wrapper a
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 /* №7 Footer section */
-.footer__wrapper {
-  background: #7279D8;
-  grid-area: foot;
+.footer__wrapper
+{
+    background: #7279d8;
+    grid-area: foot;
 }
 
-
-
-/* *************************************************** */
 
 /* Media (Above 1024)*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px)
+{
+    /* №2 Images section */
+    .images__wrapper
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+    }
 
-  /* №2 Images section */
-  .images__wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr 1fr;
-  }
-  .mainSection__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-
-  }
-
-
+    /* №4 Main section */
+    .mainSection__wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
-/* *************************************************** */
 
 /* Media (Up to 360)*/
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 360px)
+{
+    .grid__container
+    {
+        grid-template-rows: 40px auto auto 100px 100px 100px auto;
+        grid-template-areas: 
+        'header header header header'
+        'img img img img'
+        'bnr bnr bnr bnr'
+        'main main main main'
+        'content content content content'
+        'nav nav nav nav'
+        'foot foot foot foot';
+    }
 
-  .grid__container {
+    /* №1 Header section */
+    .headers__wrapper
+    {
+        grid-template-columns: 2fr 1fr;
+    }
 
-    grid-template-areas:
-      "header header header header"
-      "img img img img"
-      "bnr bnr bnr bnr"
-      "main main main main"
-      "content content content content"
-      "nav nav nav nav"
-      "foot foot foot foot";
-  }
-  /* №1 Header section */
-  .headers__wrapper {
-    grid-template-columns: 2fr 1fr;
-  }
+    /* №2 Images section */
+    .images__wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr 1fr 1fr 1fr;
+    }
 
-  /* №2 Images section */
-  .images__wrapper {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr 1fr 1fr 1fr;
-  }
+    /* №3 Banners section */
+    .banners__wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 40px;
+    }
 
-  /* №3 Banners section */
-  .banners__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 40px 40px;
-
-  }
-  /* №4 Main section */
-  .mainSection__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
+    /* №4 Main section */
+    .mainSection__wrapper
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
