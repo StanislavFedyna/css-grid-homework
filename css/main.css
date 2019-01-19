@@ -26,7 +26,6 @@ div {
     "main main nav nav"
     "content content . ."
     "foot foot foot foot"
-    "foot foot foot foot"
   ;
 }
 
@@ -62,7 +61,6 @@ div {
 .banners__wrapper {
   display: grid;
   grid-template-columns: 1.4fr 3fr;
-  /* 3.1 дати min */
   grid-area: bnr;
 }
 
@@ -121,21 +119,35 @@ div {
 
 
 
+/* *************************************************** */
 
 /* Media (Above 2014)*/
 @media only screen and (max-width: 1024px) {
 
   /* №2 Images section */
   .images__wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
 
 }
 
+/* *************************************************** */
+
 /* Media (Up to 360)*/
 @media only screen and (max-width: 360px) {
 
+  .grid__container {
+
+    grid-template-areas:
+      "header header header header"
+      "img img img img"
+      "bnr bnr bnr bnr"
+      "main main nav nav"
+      "content content content content"
+      "foot foot foot foot"
+    ;
+  }
   /* №1 Header section */
   .headers__wrapper {
     grid-template-columns: 2fr 1fr;
