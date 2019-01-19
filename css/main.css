@@ -22,13 +22,12 @@ div
     display: grid;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 40px auto auto 240px auto 100px 30px;
+    grid-template-rows: 40px auto auto 240px 100px 30px;
     grid-template-areas: 
     'header header header header'
     'img img img img'
     'bnr bnr bnr bnr'
     'main main nav nav'
-    'ch-2 ch-3 . .'
     'content content . .'
     'foot foot foot foot'
     ;
