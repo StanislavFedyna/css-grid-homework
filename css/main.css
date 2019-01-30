@@ -58,6 +58,7 @@ div
 {
     width: 50px;
     height: 40px;
+    
 }
 
 .images__wrapper > div
@@ -107,6 +108,11 @@ div
     background: #2f3584;
     align-self: start;
     grid-area: nav;
+}
+
+.banners__wrapper ul{
+  margin: 0;
+  padding: 0;
 }
 
 .navigation__wrapper li
