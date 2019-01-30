@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
   <link rel="stylesheet" href="css/main.css">
   <title>css-grid-homework</title>
 </head>
+
 <body>
-  <section class="grid__container">
+  <div class="grid__container">
     <header class="headers__wrapper">
       <div>1.1</div>
       <div>1.2</div>
@@ -23,12 +25,16 @@
       <div>3.1</div>
       <div>3.2</div>
     </div>
-    <div class="mainSection__wrapper">
-      <div>4.1</div>
-      <div>4.2</div>
-      <div>4.3</div>
-    </div>
-    <div class="content__wrapper">5</div>
+
+
+      <section class="content__wrapper">
+        <article>4.1</article>
+        <article>4.2</article>
+        <article>4.3</article>
+      </section>
+      <section class="subcontent__wrapper">5</section>
+
+
     <nav class="navigation__wrapper">
       <ul>
         <li><a href="#">Home</a></li>
@@ -39,6 +45,7 @@
       </ul>
     </nav>
     <footer class="footer__wrapper">7</footer>
-  </section>
+  </div>
 </body>
+
 </html>
