@@ -33,8 +33,8 @@ div, article, section, figure
     'header header header header'
     'img img img img'
     'bnr bnr bnr bnr'
-    'main main nav nav'
-    'content content . .'
+    'cnt cnt nav nav'
+    'subinfo subinfo . .'
     'footer footer footer footer'
     ;
 }
@@ -92,7 +92,7 @@ div, article, section, figure
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-area: main;
+    grid-area: cnt;
 }
 
 .content__wrapper > section
@@ -105,7 +105,7 @@ div, article, section, figure
 .subinfo__wrapper
 {
     background: #c861d3;
-    grid-area: content;
+    grid-area: subinfo;
 }
 
 /* №6 Navigation section */
@@ -170,8 +170,8 @@ div, article, section, figure
         'header header header header'
         'img img img img'
         'bnr bnr bnr bnr'
-        'main main main main'
-        'content content content content'
+        'cnt cnt cnt cnt'
+        'subinfo subinfo subinfo subinfo'
         'nav nav nav nav'
         'footer footer footer footer';
     }
